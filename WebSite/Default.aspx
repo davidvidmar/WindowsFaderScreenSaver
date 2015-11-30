@@ -9,15 +9,14 @@
     <meta name="description" content="" />
     <link href="default.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
-<body>
-<!--    <form id="form1" runat="server"> -->
+<body>    
     <!-- start header -->
     <div id="header">
         <div id="logo">
-            <h1>
-                Windows Fader</h1>
+            <h1>Windows Fader</h1>
             <p>
-                A Free Screensaver for Microsoft Windows XP and Vista</p>
+                A Free Screensaver for Microsoft Windows XP and Vista
+            </p>
         </div>
         <div id="menu">
             <p>
@@ -31,42 +30,43 @@
         <!-- start content -->
         <div id="content">
             <div class="post">
-                <h1 class="title">
-                    What is Windows Fader?</h1>
-                <div>                    
+                <h1 class="title">What is Windows Fader?</h1>
+                <div>
                     <p>
                         <strong>Windows Fader </strong>is a free screen saver for Microsoft Windows XP and
                         Windows Vista.
                     </p>
-                    
+
                     <p>
                         It will gradually fade your screen to black or any other color. You can set the
-                        speed of fading and how dark you want it to be.</p>
+                        speed of fading and how dark you want it to be.
+                    </p>
                     <p>
                         It was inspired by a similar screen saver on Mac. It was written for myself, but
                         when I published it on my blog I got some good feedback and now it has it&#39;s
-                        own homepage.</p>
+                        own homepage.
+                    </p>
                     <p>
                         If you have any ideas or if you found a bug in Windows Fader, please let me know
-                        using Contact Form.</p>
+                        using Contact Form.
+                    </p>
                 </div>
             </div>
             <div class="post">
-                <h2 class="title">
-                    Download</h2>
+                <h2 class="title">Download</h2>
                 <div>
                     <p>
                         <b>Windows Fader</b> is available in two formats.
                     </p>
                     <ul>
-                        <li><a href="http://vidmar.net/WindowsFader/download/Windows%2520Fader%25202%2520Setup.msi">
-                            Windows Fader Setup</a> (version <b>2.0.1.0</b>, size <b>347 kB</b>)</li>
+                        <li><a href="http://vidmar.net/WindowsFader/download/Windows%2520Fader%25202%2520Setup.msi">Windows Fader Setup</a> (version <b>2.0.1.0</b>, size <b>347 kB</b>)</li>
                         <li><a href="http://vidmar.net/WindowsFader/download/Windows%2520Fader%25202.zip">Windows
                             Fader Standalone .SCR File</a> (version<b> 2.0.1.0</b>, size <b>44 kB</b>)</li>
                     </ul>
                     <p>
                         You&#39;ll need Microsoft .NET Framework. If it&#39;s not intalled yet on your machine,
-                        you can get it from Microsoft:</p>
+                        you can get it from Microsoft:
+                    </p>
                     <ul>
                         <li><a href="http://msdn.microsoft.com/en-us/netframework/default.aspx">Microsoft .NET
                             Framework</a></li>
@@ -79,8 +79,7 @@
         <div id="sidebar">
             <ul>
                 <li>
-                    <h2>
-                        Links</h2>
+                    <h2>Links</h2>
                     <ul>
                         <li><a href="http://vidmar.net/weblog/">My Blog </a>&nbsp;(<a href="http://feeds.vidmar.net/BiteMyBytes">RSS
                             Feed</a>)</li>
@@ -92,39 +91,38 @@
                                 width="171" /></a><script type="text/javascript">                                                      a2a_linkname = "Windows Fader"; a2a_linkurl = "http://windowsfader.com"; a2a_num_services = 6;</script><script
                                     type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script></li>
                     </ul>
-                    <h2>
-                        Support us!</h2>
-                    <ul>                    
+                    <h2>Support us!</h2>
+                    <ul>
                         <li>
                             <!--- Google AdSense --->
 
                             <script type="text/javascript">
                             <!--
-                                google_ad_client = "pub-5686862836711088";
-                                /* 120x240, created 11/22/08 */
-                                google_ad_slot = "3258715916";
-                                google_ad_width = 120;
-                                google_ad_height = 240;
-                            //-->
+    google_ad_client = "pub-5686862836711088";
+    /* 120x240, created 11/22/08 */
+    google_ad_slot = "3258715916";
+    google_ad_width = 120;
+    google_ad_height = 240;
+    //-->
                             </script>
                             <script type="text/javascript"
-                            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                             </script>
 
                             <!--- End of Google AdSense --->
                         </li>
                         <li>
 
-<!-- PayPal Donate -->
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="3409923">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin: 4px 4px 4px 4px">
-<img  alt="" border="0" hsrc="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-<!-- /PayPal Donate -->
+                            <!-- PayPal Donate -->
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="3409923">
+                                <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin: 4px 4px 4px 4px">
+                                <img alt="" border="0" hsrc="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </form>
+                            <!-- /PayPal Donate -->
 
-            			</li>
+                        </li>
 
                     </ul>
                 </li>
@@ -147,12 +145,10 @@
     <!-- end page -->
     <div id="footer">
         <p>
-            © 2008 David Vidmar • All Rights Reserved. &bull; Design by <a href="http://freetamplates.org/">
-                Free CSS Templates</a> &bull; Icon by <a href="http://350designs.com/resources/illustrator/free-vector-png-computer-monitor-icon">
-                    350Designs</a>.
+            © 2008 David Vidmar • All Rights Reserved. &bull; Design by <a href="http://freetamplates.org/">Free CSS Templates</a> &bull; Icon by <a href="http://350designs.com/resources/illustrator/free-vector-png-computer-monitor-icon">350Designs</a>.
         </p>
     </div>
-<!--    </form> --->
+    <!--    </form> --->
     <!-- Google Analytics -->
 
     <script type="text/javascript">

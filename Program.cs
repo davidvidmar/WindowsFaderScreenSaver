@@ -37,7 +37,7 @@ namespace DavidVidmar.WindowsFader
                         ShowScreenSaver();
                         break;
                     default:
-                        MessageBox.Show("Invalid command line argument :" + arg, "Invalid Command Line Argument", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Invalid command line argument :{arg}", "Invalid Command Line Argument", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
             }

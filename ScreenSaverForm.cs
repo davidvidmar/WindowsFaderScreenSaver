@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -15,25 +14,25 @@ namespace DavidVidmar.WindowsFader
 		/// <summary>
 		/// Keep track of whether the screensaver has become active. 
 		/// </summary>
-        private bool active;
+        private bool _active;
 
 		/// <summary>
         /// Current mouse location.
 		/// </summary>
-        private Point mouseLocation;
+        private Point _mouseLocation;
 
         /// <summary>
         /// Old mouse location.
         /// </summary>
-        private Point oldMouseLocation;
+        private Point _oldMouseLocation;
 
 		/// <summary>
 		/// Doing fade in?
 		/// </summary>
-        bool fadeIn;
+		private bool _fadeIn;
 
-        private const bool debug = false;
-        private DateTime startTime;
+        private const bool Debug = false;
+        private DateTime _startTime;
 
         #endregion
 
@@ -72,22 +71,22 @@ namespace DavidVidmar.WindowsFader
             if (Settings.FadeColor != 0)
                 this.BackColor = Color.FromArgb(Settings.FadeColor);
 
-            this.oldMouseLocation = Cursor.Position;
+            this._oldMouseLocation = Cursor.Position;
             Cursor.Position = new Point(Bounds.Right + 1, Bounds.Bottom + 1);
 
-            if (debug)
+            if (Debug)
             {
                 fadeToLabel.Visible = true;
                 fadeTimeLabel.Visible = true;
                 currentTimeLabel.Visible = true;
                 currentTransparencyLabel.Visible = true;
 
-                fadeToLabel.Text = string.Format("Fade to: {0}", Settings.EndOpacityPercent);
-                fadeTimeLabel.Text = string.Format("Fade time: {0} ms", Settings.CompleteFadeInSeconds*1000);
+                fadeToLabel.Text = $"Fade to: {Settings.EndOpacityPercent}";
+                fadeTimeLabel.Text = $"Fade time: {Settings.CompleteFadeInSeconds*1000} ms";
 
                 currentUserLabel.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-                startTime = DateTime.Now;
+                _startTime = DateTime.Now;
             }
         }
 
@@ -101,7 +100,7 @@ namespace DavidVidmar.WindowsFader
 
 			foreach (var screen in Screen.AllScreens)
 			{
-			    Debug.WriteLine(screen.DeviceName + " " + screen.Bounds);
+			    System.Diagnostics.Debug.WriteLine(screen.DeviceName + " " + screen.Bounds);
                 allScreens = Rectangle.Union(allScreens, screen.Bounds);
 			}            
 		    return allScreens;
@@ -113,7 +112,7 @@ namespace DavidVidmar.WindowsFader
         private void FadeIn()
         {
             this.timer.Interval = 10;
-            this.fadeIn = true;
+            this._fadeIn = true;
         }
 
         /// <summary>
@@ -124,22 +123,22 @@ namespace DavidVidmar.WindowsFader
         private void ScreenSaverForm_MouseMove(object sender, MouseEventArgs e)
         {
             // Set IsActive and MouseLocation only the first time this event is called.
-            if (!this.active)
+            if (!_active)
             {
-                this.mouseLocation = MousePosition;
-                this.active = true;
+                _mouseLocation = MousePosition;
+                _active = true;
             }
             else
             {
                 // If the mouse has moved significantly since first call, close.
-                if ((Math.Abs(MousePosition.X - mouseLocation.X) > 1) ||
-                    (Math.Abs(MousePosition.Y - mouseLocation.Y) > 1))
+                if ((Math.Abs(MousePosition.X - _mouseLocation.X) > 1) ||
+                    (Math.Abs(MousePosition.Y - _mouseLocation.Y) > 1))
                 {
-                    this.FadeIn();
+                    FadeIn();
                 }
                 else
                 {
-                    this.mouseLocation = MousePosition;
+                    _mouseLocation = MousePosition;
                 }
             }
         }
@@ -171,23 +170,22 @@ namespace DavidVidmar.WindowsFader
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (!this.fadeIn)
+            if (!this._fadeIn)
             {
                 if (Opacity < Settings.EndOpacityPercent)
                 {                    
                     Opacity += 0.005;
 
-                    if (debug)
+                    if (Debug)
                     {
-                        currentTransparencyLabel.Text = string.Format("Current opacity: {0:N2}", Opacity);
-                        currentTimeLabel.Text = string.Format("Elapsed time: {0} ms",
-                                                              DateTime.Now.Subtract(startTime).TotalMilliseconds);
+                        currentTransparencyLabel.Text = $"Current opacity: {Opacity:N2}";
+                        currentTimeLabel.Text = $"Elapsed time: {DateTime.Now.Subtract(_startTime).TotalMilliseconds} ms";
                     }
                 }
             }
             else
             {
-                Cursor.Position = this.oldMouseLocation;
+                Cursor.Position = this._oldMouseLocation;
                 Opacity -= 0.12;
                 if (Opacity <= 0)
                 {
