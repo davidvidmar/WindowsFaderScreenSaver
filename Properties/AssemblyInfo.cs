@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Windows Fader 2")]
+[assembly: AssemblyTitle("Windows Fader 3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("David Vidmar")]
-[assembly: AssemblyProduct("Windows Fader 2 Screen Saver")]
-[assembly: AssemblyCopyright("Copyright © David Vidmar 2007-2009")]
+[assembly: AssemblyProduct("Windows Fader 3 Screen Saver")]
+[assembly: AssemblyCopyright("Copyright © David Vidmar 2007-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -27,5 +27,5 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("2.1.0.0")]
-[assembly: AssemblyFileVersion("2.1.0.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]

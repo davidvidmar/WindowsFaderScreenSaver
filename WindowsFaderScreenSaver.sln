@@ -1,13 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFaderScreenSaver", "WindowsFaderScreenSaver.csproj", "{F114192D-688B-457F-AD58-C24F870559E0}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WindowsFaderSetup", "Setup\Setup.vdproj", "{9918A99F-254A-4E09-9FB2-4E59AA746945}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite", "WebSite\", "{52723CD3-78F7-4372-A3C4-F85906EA9959}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFramework = "3.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		Debug.AspNetCompiler.VirtualPath = "/WebSite"
 		Debug.AspNetCompiler.PhysicalPath = "WebSite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite\"
