@@ -164,14 +164,15 @@ namespace DavidVidmar.WindowsFader
             // 
             // completeInTextBox
             // 
+            this.completeInTextBox.AllowPromptAsInput = false;
             this.completeInTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.completeInTextBox.Location = new System.Drawing.Point(111, 19);
             this.completeInTextBox.Name = "completeInTextBox";
+            this.completeInTextBox.PromptChar = '*';
             this.completeInTextBox.Size = new System.Drawing.Size(38, 22);
             this.completeInTextBox.SkipLiterals = false;
             this.completeInTextBox.TabIndex = 0;
             this.completeInTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.completeInTextBox.UseSystemPasswordChar = true;
             // 
             // endOpacityTrackBar
             // 
