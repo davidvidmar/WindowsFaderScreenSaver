@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project name="CollectR" default="build">
+
+	<target name="build" description="Full rebuild" depends="clean,compile" />
+	<target name="build-ccnet" description="Full rebuild on CCnet" depends="clean,update-revert,compile" />
+
+	<!-- updating -->
+
+	<target name="update" description="Update code from Subversion repository">
+		<exec program="svn.exe">
+			<arg value="update" />
+		</exec>
+	</target>
+
+	<target name="update-revert" description="Update code from Subversion repository and revert any local changes">
+		<exec program="svn.exe"><arg line="revert . -R" /></exec>
+		<exec program="svn.exe">
+			<arg value="update" />
+		</exec>
+	</target>
+
+	<!-- cleanup -->
+
+	<target name="clean" description="Clean up. Delete all bin and obj folder recursively.">
+		<delete failonerror="false">
+			<fileset>
+				<include name="**/bin/**" />
+				<include name="**/obj/**" />
+				<exclude name="**/*.refresh" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="clean-resharper" description="Deletes all _Resharper temporary folders.">
+		<delete>
+			<fileset>
+				<include name="**/_Resharper*/**" />
+			</fileset>
+		</delete>
+	</target>
+
+	<!-- compiling -->
+
+	<target name="compile" description="Compila all solutions.">
+		<exec program="C:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe"
+			commandline='"Windows Fader.sln" /t:Rebuild /p:Configuration=Debug /v:m' workingdir="." />
+	</target>
+
+</project>
